@@ -2,36 +2,54 @@
 <html>
 
 <head>
+	<title>Верстка lawyer-website</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231115205411">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «lawyer_website»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «lawyer_website»</h1>
-		<div class="rootpage__info">
-			Особенности проекта
+	<div class="wrapper">
+		<div class="rootpage">
+			<h1>Верстка lawyer-website</h1>
+			<div class="rootpage__info">
+				<!-- Особенности проекта -->
+			</div>
+			<h2>Готовые страницы:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html">Главная</a></li>
+			</ol>
+			<!-- <h2>Попапы:</h2>
+            <ol class="rootpage__list">
+               <li><a target="_blank" href="home.html#" data-popup=""></a></li>
+            </ol> -->
+			<!-- <div class="rootpage__tnx">
+   				<h2>Спасибо за заказ!</h2>
+   				<p>Буду рад (а) хорошему отзыву.</p>
+   				<p>Обращайтесь еще!</p>
+   			</div> -->
+			<div class="rootpage__contacts">
+				<h2>Мои контакты:</h2>
+				<p>Telegram: <a href="https://t.me/fezqq">@fezqq</a></p>
+				<p>Почта: <a href="mailto:email@gmail.com">wizlvv@gmail.com</a></p>
+				<p>Почта: <a href="mailto:email@gmail.com">wizl5@mail.ru</a></p>
+			</div>
 		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад (а) хорошему отзыву.</p>
-			<p>Обращайтесь еще!</p>
+		<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+				Text
+			</div>
 		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
-		</div>
+	</div>
+</div> -->
+		<script src="js/app.min.js?_v=20231115205411"></script>
 	</div>
 </body>
 <style>
@@ -54,36 +72,37 @@
 		padding: 0;
 		min-width: 320px;
 		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
+		/* color: #fff; */
+		background-color: #323232;
 	}
 
 	body {
-		font-family: Montserrat;
+		/* font-family: Montserrat; */
 		font-size: 100%;
 		line-height: 1;
 		font-size: 1rem;
 	}
 
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
+	.rootpage a:visited {
+		text-decoration: none;
 		color: #aaa768;
 	}
 
-	a:hover {
+	.rootpage a,
+	.rootpage__contacts a:visited {
 		text-decoration: none;
+		color: #ebe691;
 	}
 
-	ul li {
+	.rootpage a:hover {
+		text-decoration: underline;
+	}
+
+	.rootpage ul li {
 		list-style: none;
 	}
 
-	img {
+	.rootpage img {
 		vertical-align: top;
 	}
 
@@ -98,6 +117,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
+		color: #fff;
 	}
 
 	@media (max-width: 767px) {
@@ -106,27 +126,27 @@
 		}
 	}
 
-	h1 {
+	.rootpage h1 {
 		color: #ebe691;
 		font-size: 2.5rem;
 		margin: 0px 0px 1.25rem 0px;
 	}
 
 	@media (max-width: 767px) {
-		h1 {
+		.rootpage h1 {
 			font-size: 1.85rem;
 			margin: 0px 0px 1.25rem 0px;
 		}
 	}
 
-	h2 {
+	.rootpage h2 {
 		color: #ebe691;
 		font-size: 1.25rem;
 		margin: 0px 0px 1rem 0px;
 	}
 
 	@media (max-width: 767px) {
-		h2 {
+		.rootpage h2 {
 			font-size: 1.125rem;
 			margin: 0px 0px 1rem 0px;
 		}
@@ -163,7 +183,6 @@
 
 	.rootpage__contacts {
 		background: #32b5a4;
-
 	}
 
 	.rootpage__contacts a {
